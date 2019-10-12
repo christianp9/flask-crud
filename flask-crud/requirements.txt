@@ -1,0 +1,8 @@
+flask
+flask-bootstrap
+flask-WTF
+flask-testing
+blinker
+firebase-admin
+google-cloud-firestore
+flask-login

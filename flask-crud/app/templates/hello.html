@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% import 'macros.html' as macros %}
+    {% import 'bootstrap/wtf.html' as wtf %}
+
+    {% block content %}
+        {% if username %}
+            <h1>bienvenido, {{ username | capitalize }}</h1>
+        {% endif %}
+        {% if user_ip%}
+            <h3>hello wjbnorld, tu ip es {{user_ip}}</h3>
+        {% else %}
+            <a href="{{ url_for('index') }}">ir a inicio</a>
+        {% endif %}
+        <div class="container">
+            <h2>agrega un juego</h2>
+
+            {{ wtf.quick_form(todo_form) }}
+        </div>
+        <ul>
+            {% for todo in todos %}
+                {{macros.render_todo(todo)}}
+            {% endfor %}
+        </ul>
+    {% endblock %}
+</body>
+
+</html>

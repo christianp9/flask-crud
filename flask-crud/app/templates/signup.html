@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        {% extends 'base.html' %}
+        {% import 'bootstrap/wtf.html' as wtf %}
+        
+        {% block title %}
+            {{ super() }}
+            sign up
+        {% endblock %}
+        
+        {% block content %}
+        <h1>registra una cuenta</h1>
+            <div class="continer">
+                {{ wtf.quick_form(signup_form) }}
+            </div>
+        {% endblock %}
+</body>
+</html>

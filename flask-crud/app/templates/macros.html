@@ -1,0 +1,19 @@
+{% macro render_todo(todo) %}
+<li></li>
+<table class="table table-striped">
+        <thead>
+            <th scope="col">game</th>
+            <th scope="col">description</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{todo.to_dict().game}}</td>
+            <td>{{todo.to_dict().description}}</td>
+            <td>{{todo.to_dict().price}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+{%endmacro%}

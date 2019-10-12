@@ -1,0 +1,8 @@
+img{
+    max-width: 200px;
+    max-height: 50px;
+}
+
+html * {
+    font-family: 'Baloo', cursive;
+}
